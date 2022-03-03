@@ -63,4 +63,24 @@ print(dict2)
 
 print(int('12',16))  # 如果是带参数base的话，12要以字符串的形式进行输入，12 为 16进制
 
+print("------list method------")
+list = [2, 5, 7, 88, 4 ,5, 66, 2, 1, 5, 4, 66]
+list2 = [33,44,55]
+
+list.append(88) # 在列表末尾添加新的对象
+print(list.count(5)) # 统计某个元素在列表中出现的次数
+list.extend(list2) # 在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）
+print(list.index(5)) # 从列表中找出某个值第一个匹配项的索引位置
+list.insert(2,8) # list.insert(index, obj) 将对象插入列表
+list.pop(2) # list.pop([index=-1]) 移除列表中的一个元素（默认最后一个元素），并且返回该元素的值
+list.remove(5) # 移除列表中某个值的第一个匹配项
+list.reverse() # 反向列表中元素
+list.sort() # 对原列表进行排序
+list2 = list.copy() # 复制列表
+list.clear() # 清空列表
+
+print(list)
+print(list2)
+
+
 
