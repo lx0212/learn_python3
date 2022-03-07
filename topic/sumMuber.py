@@ -12,15 +12,14 @@ import copy
 
 class SumNumber:
     nums = []
-    
 
-    def sum(self,n,target):
-        print("nums:",n)
+    def sum(self, n, target):
+        print("nums:", n)
 
-        for k,v in enumerate(n):
-            for i in range (k,len(n)):
+        for k, v in enumerate(n):
+            for i in range(k, len(n)):
                 if v + n[i] == target:
-                    print(k,i)
+                    print(k, i)
 
 
 class Solution:
@@ -37,23 +36,23 @@ class Solution:
                 return [i, index]
         return None
 
+
 class Solution2:
-    def toSum(self,nums,target):
+    def toSum(self, nums, target):
 
         original = copy.copy(nums)
         nums.sort()
-        
-        left = 0
-        right = len(nums) -1
-        
-        for i in range (0,len(nums)):
-            if nums[left] + nums[right] > target:
-                right-=1
-            elif nums[left] + nums[right] < target:
-                left+=1
-            else:
-                return original.index(nums[left]),original.index(nums[right])
 
+        left = 0
+        right = len(nums) - 1
+
+        for i in range(0, len(nums)):
+            if nums[left] + nums[right] > target:
+                right -= 1
+            elif nums[left] + nums[right] < target:
+                left += 1
+            else:
+                return original.index(nums[left]), original.index(nums[right])
 
 
 # s = SumNumber()
@@ -62,5 +61,5 @@ class Solution2:
 # ss = Solution()
 # print(ss.twoSum([2, 8, 11, 7],9))
 
-s = Solution2()
-print(s.toSum([2, 8, 7, 11], 9))
+s = Solution()
+print(s.twoSum([3,3], 6))
