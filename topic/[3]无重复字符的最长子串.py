@@ -38,27 +38,25 @@
 #  Related Topics 哈希表 字符串 滑动窗口 👍 7047 👎 0
 
 
+# m = dict()
+# ret = ll = 0
+# for c in s:
+#     if c in m:
+#         ll = 0
+#         m = dict()
+#         m[c] = 1
+#         ll += 1
+#         ret = max(ret, ll)
+#         continue
+#     else:
+#         ll += 1
+#
+#     m[c] = 1
+#     ret = max(ret, ll)
+#
+# return ret
+
 # leetcode submit region begin(Prohibit modification and deletion)
-class Solution2:
-    def lengthOfLongestSubstring2(self, s: str) -> int:
-        m = dict()
-        ret = ll = 0
-        for c in s:
-            if c in m:
-                ll = 0
-                m = dict()
-                m[c] = 1
-                ll += 1
-                ret = max(ret, ll)
-                continue
-            else:
-                ll += 1
-
-            m[c] = 1
-            ret = max(ret, ll)
-
-        return ret
-
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
@@ -80,8 +78,8 @@ class Solution:
         return ans
 
 
-# s = Solution()
-# print(s.lengthOfLongestSubstring("abcabcbb"))
+# s = Solution2()
+# print(s.lengthOfLongestSubstring2("abcabdfree"))
 
 # x = set(['a', 'b'])
 # x.add('c')
